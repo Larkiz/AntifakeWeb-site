@@ -1,0 +1,152 @@
+/* политика конфиденциальности */
+#backBtnPolit {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 110px;
+  width: 70px;
+}
+.conf-popup {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 3;
+  display: none;
+  justify-content: center;
+}
+.popup-content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+
+  background-color: #fff;
+  color: black;
+  font-size: 17px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #000;
+}
+
+.popup-content {
+  margin: auto auto;
+  overflow-y: auto;
+  height: 85%;
+}
+
+ol {
+  /* убираем стандартную нумерацию */
+  list-style: none;
+  /* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
+  counter-reset: li;
+}
+li:before {
+  /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+  counter-increment: li;
+  /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+  content: counters(li, ".") ". ";
+}
+
+/* Обратная связь */
+.feedback-popup {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 3;
+  display: none;
+}
+
+.feedback {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 25%;
+  right: 0;
+  height: 350px;
+  width: 240px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #333;
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+}
+
+.feedback:after {
+  position: absolute;
+  content: "";
+  right: -10px;
+  bottom: 18px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #1a044e;
+}
+
+.feedback p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  line-height: 28px;
+}
+
+.name-input {
+  border: none;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px;
+  width: 82%;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.name-input:focus {
+  outline: none;
+  border-bottom: 1px solid #0d095e;
+}
+
+.feedback .submit-btn {
+  position: absolute;
+  border-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #fff;
+  color: black;
+  padding: 12px 25px;
+  display: inline-block;
+  font-size: 12px;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 3px;
+  right: -10px;
+  bottom: -20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4);
+}
+
+.feedback .submit-btn:hover {
+  background-color: #0f82da;
+  color: #fff;
+  box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
+}
+
+#backBtnFeedback {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: -30px;
+  right: 85%;
+  width: 70px;
+}

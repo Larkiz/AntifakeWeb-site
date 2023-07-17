@@ -1,0 +1,16 @@
+@media (max-width: 1280px) {
+  .main-cont {
+    width: 100%;
+  }
+}
+/* @media (max-width: 1024px) */
+@media (max-width: 861px) {
+  .accordion {
+    font-size: 15px;
+  }
+}
+@media (max-width: 490px) {
+  .accordion {
+    font-size: 14px;
+  }
+}

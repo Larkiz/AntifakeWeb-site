@@ -1,0 +1,35 @@
+.card-cont {
+  width: 200px;
+  min-height: 284px;
+  background: white;
+  border-radius: 15px;
+  filter: drop-shadow(0px 5px 5px rgba(56, 56, 56, 0.25));
+  overflow: hidden;
+  margin: auto 20px;
+  font-size: 9px;
+}
+.main-screen-title {
+  min-height: 90px;
+}
+.card-content {
+  margin-top: -15px;
+  padding: 10px;
+  background-color: white;
+}
+
+.card-cont img {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+
+.line-btn-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.line-btn-time p {
+  font-size: 13px;
+  opacity: 95%;
+}

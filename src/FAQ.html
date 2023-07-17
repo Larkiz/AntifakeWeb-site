@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>НеФейкИнфо-FAQ</title>
+    <link rel="stylesheet" href="./styles-faq/style.css" />
+    <link rel="stylesheet" href="./styles-faq/media-queries-adaptive.css" />
+  </head>
+  <header>
+    <h2 class="header-title">Ответы на часто задаваемые вопросы</h2>
+    <a href="index.html" style="text-decoration: none">На главную</a>
+  </header>
+  <body>
+    <div class="main-cont">
+      <button class="accordion">Для чего создано данное приложение?</button>
+      <div class="panel">
+        <p>
+          Приложение было разработано для того, чтобы все люди, желающие увидеть
+          достоверную информацию о ситуации в мире, могли, не проверяя каждую
+          новость, воспользоваться нашим приложением и увидеть правду.
+        </p>
+      </div>
+
+      <button class="accordion">
+        Как происходит определение достоверности информации?
+      </button>
+      <div class="panel">
+        <ol>
+          <li>Новость поступает в искусственный интеллект.</li>
+          <li>
+            Искусственный интеллект проверяет статью и присваивает ей значение
+            0(ложное), либо 1(верно).
+          </li>
+          <li>Выводит статьи, значение которых равно 1.</li>
+        </ol>
+      </div>
+
+      <button class="accordion">
+        При поиске информации выдается «Достоверные новости» и «Стоит
+        перепроверить»?
+      </button>
+      <div class="panel">
+        <p>
+          Достоверная информация-это информация, которую алгоритм пометил как
+          надежную.
+        </p>
+        <p>
+          Стоит перепроверить-это информация, которую алгоритм пометил как,
+          недостоверную.
+        </p>
+      </div>
+      <button class="accordion">
+        По каким данным алгоритм помечает новость как «Стоит перепроверить»?
+      </button>
+      <div class="panel">
+        <p>
+          Искусственный интеллект был обучен при помощи определенного количества
+          информации, которая, заведомо, включала в себя как достоверные, так и
+          фейковые новости. Следовательно алгоритм, созданный нами максимально
+          обучен распознавать недостоверную информацию.
+        </p>
+      </div>
+      <button class="accordion">
+        Что будет происходить с приложением в будущем ?
+      </button>
+      <div class="panel">
+        <p>
+          В ближайшее время будет проводиться доработка приложения, исправление
+          ошибок, обнаруженных нами или пользователями. Будет усовершенствован
+          искусственный интеллект, добавлены новые возможности.
+        </p>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
